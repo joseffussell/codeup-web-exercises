@@ -23,7 +23,7 @@ price.toFixed(2);
 // price will return with the value of 2.70
 
 var prices = "2.7"; //* variable was initially named price, but as to not interfere with previous variable names, it was renamed was renamed to prices
-prices.toFixed(2);
+
 // I foresee the same result of price except as a string, the console ran the command but would not return a value, as to fixed doesn't associate with strings
 
 isNaN(0);
@@ -84,4 +84,28 @@ NaN == NaN
 //true
 !!"0"
 //true
+
+var sample = "Hello Codeup";
+
+console.log(sample.length);
+
+console.log(sample.toLowerCase());
+
+console.log(sample.toUpperCase());
+
+var sample = "Hello Codeup" + " Students";
+
+console.log(sample);
+
+sample.replace("Students", "Class");
+
+sample = sample.replace("Students", "Class")
+
+console.log(sample.indexOf("c"));
+// the value returned from indexOf c returned as -1
+console.log(sample.indexOf("C"));
+// the value returned was 6
+
+
+
 
