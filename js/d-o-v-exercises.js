@@ -106,6 +106,27 @@ console.log(sample.indexOf("c"));
 console.log(sample.indexOf("C"));
 // the value returned was 6
 
+var brotherBear = 5;
+var theLittleMermaid = 3;
+var hercules = 1;
+var x = 3;
+var total = (brotherBear + theLittleMermaid + hercules) * x;
+
+console.log(total);
+
+var google = 400 * 6;
+var amazon = 380 * 4;
+var facebook = 350 * 10;
+var totalmonies = (google + amazon + facebook);
+
+console.log(totalmonies);
+
+// unable to figure out how to translate student enrollment question into JS as well as premium offer question
+
+
+
+
+
 
 
 
