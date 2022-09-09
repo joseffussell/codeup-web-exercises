@@ -123,6 +123,9 @@ console.log(totalmonies);
 
 // unable to figure out how to translate student enrollment question into JS as well as premium offer question
 
+var username = 'codeup';
+var password = 'notastrongpassword';
+
 
 
 
