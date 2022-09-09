@@ -38,10 +38,16 @@ alert("Your paycheck comes out to:" + ((google * googlePay) + (amazon * amazonPa
 
 //student can only enroll in class if it is not full and doesn't conflict with schedule
 
-var isThereSpace = confirm('Is there space in this class?');
-var canItSchedule = confirm('Do you have space for this in your schedule?');
-var canYouEnroll = isThereSpace && canItSchedule;
+let isThereSpace = confirm('Is there space in this class?');
+let canItSchedule = confirm('Do you have space for this in your schedule?');
+let canYouEnroll = isThereSpace && canItSchedule;
 alert('Are you eligible for enrollment? ' + canYouEnroll);
 
 //a product offer can only be applied if a person buys 2 or more items and offer isn't expired
 //premium member's don't need to buy a specified amount
+
+let premium = confirm('Are you a premium member?');
+let buysTwoOrMore = confirm('Have you purchased two or more items?');
+let isExpired = confirm('Is your coupon valid?')
+let productOffer = premium && (isExpired || buysTwoOrMore);
+alert('Will a product offer be applied? ' + productOffer);
