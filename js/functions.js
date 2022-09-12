@@ -4,10 +4,13 @@
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
- *
  * Example
- * > sayHello("codeup") // returns "Hello, codeup!"
- */
+ * > sayHello("codeup") // returns "Hello, codeup!"*/
+
+function sayHello(name) {
+    console.log('Hello' + name);
+}
+sayHello(' Josef');
 
 /**
  * TODO:
@@ -17,12 +20,18 @@
  * console.log 'helloMessage' to check your work
  */
 
+let helloMessage = sayHello(' Josef');
+
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+let myName = sayHello(' Josef')
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -43,8 +52,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * console.log *outside of the function* to check your work (you should see a
  * different result everytime you refresh the page if you are using the random
- * number)
- */
+ * number) */
+
+
+function isTwo(number) {
+    return number == 2
+}
+
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -58,12 +73,29 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+
+function calculateTip(x, y) {
+    let tip = x * y;
+    return tip;
+}
+
+console.log(calculateTip(0.20, 20));
+console.log(calculateTip(0.25, 25.50));
+console.log(calculateTip(0.15, 33.42));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+let total = 20
+prompt('Your total is: ' + total);
+let tip = prompt('How much would you like to tip?')
+let totalTip = prompt(calculateTip(tip, total));
+
+
 
 /**
  * TODO:
@@ -79,3 +111,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(x, y, z) {
+    return z - (x * y);
+}
+let discountPercent = .2;
+let originalPrice = 100;
+let totalBeforeDiscount = 100
+
+console.log(applyDiscount(originalPrice, discountPercent, totalBeforeDiscount));
+//Couldn't figure out how to produce 80 without adding a 3rd argument/parameter

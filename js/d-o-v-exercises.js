@@ -128,6 +128,15 @@ var password = 'notastrongpassword';
 
 
 
+function fullName(first, last) {
+    let name = first + last;
+    return name;
+}
+let givenName = (prompt('Whats your first name?'));
+let sirName = (prompt('Whats your last name?'));
+
+console.log('your name is ' + fullName(givenName + ' ', sirName));
+
 
 
 
