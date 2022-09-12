@@ -49,5 +49,5 @@ alert('Are you eligible for enrollment? ' + canYouEnroll);
 let premium = confirm('Are you a premium member?');
 let buysTwoOrMore = confirm('Have you purchased two or more items?');
 let isExpired = confirm('Is your coupon valid?')
-let productOffer = premium && (isExpired || buysTwoOrMore);
+let productOffer = isExpired && (premium || buysTwoOrMore);
 alert('Will a product offer be applied? ' + productOffer);
