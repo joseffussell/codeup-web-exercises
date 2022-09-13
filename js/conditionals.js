@@ -1,4 +1,4 @@
-(function () {
+
     "use strict";
 
     /* ########################################################################## */
@@ -23,6 +23,18 @@
      * console.logging the function's return value
      */
 
+// function analyzeColor(color) {
+//     if (color === 'blue') {
+//         console.log('blue is the color of the sky');
+//     } else if (color === 'red') {
+//         console.log('Strawberries are red');
+//     } else {
+//         console.log("I don't know anything about cyan")
+//     }
+//     }
+//
+// analyzeColor('red');
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -35,11 +47,29 @@
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
+   // console.log(analyzeColor(randomColor));
 
     /**
      * TODO:
      * Comment out the code above, and refactor your function to use a switch-case statement
      */
+
+// var analyzeColor = randomColor;
+//
+//     switch(analyzeColor) {
+//         case 'blue':
+//             console.log('blue is the color of the sky');
+//             break;
+//         case 'red':
+//             console.log('Strawberries are red');
+//             break;
+//         default:
+//             console.log(analyzeColor + ' I don\'t know anything about that color');
+//             break;
+//     }
+
+
+
 
     /**
      * TODO:
@@ -47,6 +77,18 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+// let color = prompt('Whats your favorite color?');
+//
+// function analyzeColor(userColor) {
+//     if (color === 'red') {
+//         return alert('Strawberries are red');
+//     } else if (color === 'blue') {
+//         return alert('The sky is blue')
+//     } else {
+//         return alert('I dont know ' + color)
+//     }
+//     }
+// analyzeColor(color);
 
     /* ########################################################################## */
 
@@ -70,6 +112,27 @@
      * return value.
      */
 
+let cost = Math.abs(100)
+
+
+function calculateTotal(number) {
+    if (number == 0) {
+        return cost;
+    } else if (number == 1) {
+        return (cost - (cost * .1));
+    } else if (number == 2) {
+        return (cost - (cost * .25));
+    } else if (number == 3) {
+        return (cost - (cost * .35));
+    } else if (number == 4) {
+        return (cost - (cost * .5));
+    } else {
+        return 'its free!'
+    }
+}
+console.log(calculateTotal());
+
+
     /**
      * TODO:
      * Uncomment the line below to generate a random number between 0 and 5.
@@ -79,7 +142,12 @@
      * price before the discount was, and what their price after the discount is.
      */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+    var luckyNumber = Math.floor(Math.random() * 6);
+
+
+
+
+
 
     /**
      * TODO:
@@ -103,4 +171,3 @@
 
 
 
-})
