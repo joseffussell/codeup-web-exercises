@@ -112,19 +112,21 @@
      * return value.
      */
 
-let cost = Math.abs(100)
+let cost = prompt('How much was your order?')
 
 
 function calculateTotal(number) {
-    if (number == 0) {
+    let luckyNumber = Math.floor(Math.random() * 6);
+    let whastsMyNumber = alert(luckyNumber);
+    if (luckyNumber == 0) {
         return cost;
-    } else if (number == 1) {
+    } else if (luckyNumber == 1) {
         return (cost - (cost * .1));
-    } else if (number == 2) {
+    } else if (luckyNumber == 2) {
         return (cost - (cost * .25));
-    } else if (number == 3) {
+    } else if (luckyNumber == 3) {
         return (cost - (cost * .35));
-    } else if (number == 4) {
+    } else if (luckyNumber == 4) {
         return (cost - (cost * .5));
     } else {
         return 'its free!'
