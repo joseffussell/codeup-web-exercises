@@ -112,27 +112,27 @@
      * return value.
      */
 
-let cost = prompt('How much was your order?')
-
-
-function calculateTotal(number) {
-    let luckyNumber = Math.floor(Math.random() * 6);
-    let whastsMyNumber = alert(luckyNumber);
-    if (luckyNumber == 0) {
-        return cost;
-    } else if (luckyNumber == 1) {
-        return (cost - (cost * .1));
-    } else if (luckyNumber == 2) {
-        return (cost - (cost * .25));
-    } else if (luckyNumber == 3) {
-        return (cost - (cost * .35));
-    } else if (luckyNumber == 4) {
-        return (cost - (cost * .5));
-    } else {
-        return 'its free!'
-    }
-}
-console.log(calculateTotal());
+// let cost = prompt('How much was your order?')
+//
+//
+// function calculateTotal(number) {
+//     let luckyNumber = Math.floor(Math.random() * 6);
+//     let whatsMyNumber = alert(luckyNumber);
+//     if (luckyNumber == 0) {
+//         return cost;
+//     } else if (luckyNumber == 1) {
+//         return (cost - (cost * .1));
+//     } else if (luckyNumber == 2) {
+//         return (cost - (cost * .25));
+//     } else if (luckyNumber == 3) {
+//         return (cost - (cost * .35));
+//     } else if (luckyNumber == 4) {
+//         return (cost - (cost * .5));
+//     } else {
+//         return 'its free!'
+//     }
+// }
+// console.log(calculateTotal());
 
 
     /**
@@ -171,5 +171,28 @@ console.log(calculateTotal());
      */
 
 
+
+function doYouInput(){
+    let userNumber = confirm('Would you like to enter a number?')
+        if (userNumber === true) {
+            return Number(prompt('What number would you like to enter?'));
+        } else {
+            return alert('Okay');
+        }
+    }
+
+
+
+
+function isEven(input) {
+    if (input % 2 == 0 && input > 0) {
+        return alert(input + ' is even'), alert('100 plus your number is: ' + (input + 100)), alert(input + ' is positive');
+    } else {
+            return alert(input + ' is odd'), alert('100 plus your number is: ' + (input + 100)), alert(input + ' is negative')
+        }
+
+}
+
+isEven(doYouInput());
 
 
