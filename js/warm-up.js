@@ -32,3 +32,15 @@ function fizzBuzzFunction(input) {
 }
 
 fizzBuzzFunction(randomNumber);
+
+
+//write a function to return an array of only even numbers
+//numbers are 1-10
+
+function even () {
+    if ( % 2 === 0) {
+
+    }
+}
+
+even()
