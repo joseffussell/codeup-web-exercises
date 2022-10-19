@@ -7,4 +7,23 @@ comment
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
 }
+
+
+h2 {
+    color: purple;
+    text-decoration: underline;
+}
+
+
+body {
+    background-color: white;
+}
+
+
+body {
+    background-image: url("https://www.rd.com/wp-content/uploads/2021/03/GettyImages-1133605325-scaled-e1617227898456.jpg?resize=1536,1023");
+}
+
+
