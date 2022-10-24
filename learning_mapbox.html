@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="../js/mapbox-geocoder-utils.js"></script>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+<script>
+    const key = 'pk.eyJ1Ijoiam9zZWY4OTAiLCJhIjoiY2w5bjg1bXl3MDM1djQwbXo1amd3YmpvNyJ9.t2rHwHcvpaAhVt0rzdfliA';
+
+    mapboxgl.accessToken = key;
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        //TODO: Set your own zoom and center
+        zoom: 10,
+        center: [-95.47968, 30.42493]
+    });
+
+    //ken do
+    let marker = new mapboxgl.Marker().setLngLat([-95.47968, 30.42493]).addTo(map)
+
+    //ken do
+    let popup = new mapboxgl.Popup().setHTML('<p>City Park</p>').addTo(marker)
+
+    //use geocode method to use a marker/popup for a given address
+    geocode('3571 falcon way', key).then(function(results) {
+
+        console.log(results)
+
+        let marker2 = new mapboxgl.Marker()
+            .setLngLat(results)
+            .addTo(map)
+
+        let popup2 = new mapboxgl.Popup(results)
+            .setLngLat(results)
+            .setHTML('<p>My house</p>')
+            .addTo(map)
+    })
+
+    //TODO: Set zoom on your own with a map.setZoom call in your console
+
+
+    //TODO: Add your own marker to where we've aligned your map so far
+
+
+    //TODO: Use the geocode method to add a 2nd marker and popup to your map, then center your map over it
+
+
+    //TODO: Try a reverse geocode yourself and see what address you get back for your coordinates - remember to send up a {lng: <lng>, lat: <lat>} object
+
+</script>
+</body>
+</html>
