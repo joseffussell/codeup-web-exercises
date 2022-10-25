@@ -38,7 +38,7 @@
     let popup = new mapboxgl.Popup().setHTML('<p>City Park</p>').addTo(marker)
 
     //use geocode method to use a marker/popup for a given address
-    geocode('3571 falcon way', key).then(function(results) {
+    geocode('13239 lake breeze ln', key).then(function(results) {
 
         console.log(results)
 
@@ -48,10 +48,14 @@
 
         let popup2 = new mapboxgl.Popup(results)
             .setLngLat(results)
-            .setHTML('<p>My house</p>')
+            .setHTML('<p>My Old House</p>')
             .addTo(map)
     })
 
+    reverseGeocode({lng: -95.52766, lat: 30.35224}, key).then(function(results){
+        console.log(results)
+
+    })
     //TODO: Set zoom on your own with a map.setZoom call in your console
 
 
