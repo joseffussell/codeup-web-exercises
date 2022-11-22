@@ -5,12 +5,27 @@
     <title>Jquery Exercises</title>
 </head>
 <body>
+<h1 id="header" class="temp">h1 element here</h1>
+
+<p id="paragraph" class="classname">Paragraph element here</p>
+
+<ul id="unordered" class="list">
+    <li id="list" class="item">Unordered list item here</li>
+</ul>
+
+<div id="container" class="span"> div here </div>
+
 <script>
     function ready() {
         alert('DOM is loaded');
     }
-
     document.addEventListener('DOMContentLoaded', ready);
+
+    function contentAlert () {
+        let alertContent = document.getElementById('header');
+        console.log(alertContent);
+    }
+    document.addEventListener('Element loaded: ', contentAlert);
 </script>
 
 <script type="text/javascript" src="js/jquery.js"></script>
