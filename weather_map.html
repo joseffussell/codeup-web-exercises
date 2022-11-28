@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link href="weathermap.css">
-    <title>Weather Map</title>
+    <meta charset="utf-8">
+    <title>Display a map with a custom style</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <!--  MAP BOX LINKS-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <!--  BOOTSTRAP LINKS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--  CSS STYLESHEET-->
+    <link rel="stylesheet" href="css/weather_map.css">
+
 </head>
 <body>
 
-<!--
-   - Display a 5 day forecast for the city I live in ⏳
-   -
+<!-- DATA TO APPEND TO -->
+<div class="date-container">
+    <div class="location" id="location"></div>
+    <div class="date" id="date"></div>
 
--->
+</div>
+<div class="container" style="margin: auto">
+    <div id="weather" class="row mb-2 text-center" style="margin: auto"></div>
+</div>
 
+<div id='map' class="rounded card-header"></div>
 
-    <div class="map">
-        <script src="js/keys.js"></script>
-        <script src="https://api.mapbox.com/styles/v1/josef890/cl9ptpl8f009a15nvebjan78z.html?title=view&access_token=pk.eyJ1Ijoiam9zZWY4OTAiLCJhIjoiY2w5bjg1bXl3MDM1djQwbXo1amd3YmpvNyJ9.t2rHwHcvpaAhVt0rzdfliA&zoomwheel=true&fresh=true#11/48.138/11.575"></script>
-        <script src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=30.3510&lon=-95.5269&zoom=5"></script>
+<!-- Load geocoder plugin. -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
 
-
-    </div>
-
-    <div class="weather-map">
-<!--        https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=30.3510&lon=-95.5269&zoom=5"-->
-    </div>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- JQUERY. BOOTSTRAP, GEOCODER, KEYS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src=".idea/js/mapbox-geocoder-utuils.js"></script>
+<script src="js/keys.mjs"></script>
 </body>
 </html>
